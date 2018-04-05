@@ -1,0 +1,23 @@
+apply plugin: 'java'
+//This plugin add tasks to my project and allow compiling 
+//java source code , run junit test case and to create JAR file.
+apply plugin: 'application'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    mavenCentral()
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+dependencies {
+   compile 'com.google.guava:guava:20.0'  // Google Guava dependency
+   //guava is a set of core libraries that include new collection types, immutable collection
+   //compile is group of dependencies that needed to build the application
+   
+   // a graph library, I/O , hashing , primitives and many more.
+   testCompile 'junit:junit:4.12'         // JUnit dependency for testing 
+   //testCompile is only for testing framework
+}
+mainClassName = 'com.javaGradle.tutorial'  // Main class with main method
+
